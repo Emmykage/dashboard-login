@@ -2,7 +2,12 @@ import React from 'react'
 
 const Profile = () => {
   return (
-    <div>Profile</div>
+    <div>
+      
+      <p className='text-left border shadow py-3 px-2'>
+        Indiviual Account
+      </p>
+    </div>
   )
 }
 

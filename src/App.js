@@ -24,23 +24,29 @@ import Profile from './components/user/Profile';
 import PaymentMethods from './components/user/PaymentMethods';
 import Loader from './components/loader/Loader';
 import TransitionsModal from './components/Modal';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import ProfileAccount from './components/user/Account';
+import Screen from './pages/Screen';
+import { useEffect } from 'react';
+import { loadOut } from './redux/auth/auth';
 
 function App() {
+  const dispatch = useDispatch()
+  const {isLogged, loading} = useSelector(state => state.auth)
+
   const {loader} = useSelector(state => state.app)
+
+  useEffect(()=> {
+    dispatch(loadOut())
+  }, [])
   return (
     <div className='App relative h-screen font-poppins overflow-y-auto'>
+
       <Routes>      
-      <Route path='/' element={ <MainLayout><Home/> </MainLayout>}/>
-      <Route path='/investment' element={ <MainLayout><Investment/> </MainLayout>}/>
-      <Route path='/resources' element={ <MainLayout><Resouces/> </MainLayout>}/>
-      <Route path='/contact' element={ <MainLayout><Contact/> </MainLayout>}/>
-      <Route path='/about_us' element={ <MainLayout><ABOUT_US/> </MainLayout>}/>
-      <Route path='/compliance_regulation' element={ <MainLayout><ComplianceRegulation/> </MainLayout>}/>
-      <Route path='/access_investment' element={ <MainLayout><AccessInvestment/> </MainLayout>}/>    
+        <Route path='/' element={ <><Screen/> </>}/>
       <Route path='/dashboard/portfolio' element={<UserLayout><Portfolio/> </UserLayout>}>
-        <Route path='' element={<AccountInvestment/>}/>
+      <Route path='' element={<AccountInvestment/>}/>
+      <Route path='investments' element={<AccountInvestment/>}/>
         <Route path='history' element={<History/>}/>
         <Route path='pending' element={<Pending/>}/>
         
@@ -62,8 +68,9 @@ function App() {
 
 
     </Routes>
-    {loader &&  <Loader/> }
-      <TransitionsModal/>
+
+    {loading &&  <Loader/> }
+      {/* <TransitionsModal/> */}
     
     </div>
      );

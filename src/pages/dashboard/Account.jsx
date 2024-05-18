@@ -5,18 +5,27 @@ const Account = () => {
   const activeLink = "active text-gray-600 px-5 py-1 text-sm font-medium"
   const inactiveLink = "text-gray-600 px-5 py-1 text-sm font-medium"
   return (
-    <div className='max-w-7xl mx-2 sm:m-auto  px-2 account'>
-      <h2 className='text-left text-gray-900 text-2xl font-semibold my-8'>My Account</h2>
+    <div className='max-w-7xl mx-0 sm:m-auto  px-2 account'>
+      <h2 className='text-left text-gray-900 text-2xl font-semibold my-8'><NavLink to={'dashboard/account/'} className={'hover:text-gray-500'}> My Account </NavLink> </h2>
 
-      <div className='w-full bg-white shadow-md p-8 flex items-center gap-10 rounded-md'>
+      <div className='w-full bg-white shadow-md p-8 flex items-center gap-4 rounded-md'>
         <div className='h-28 w-28 shadow-md rounded-full border'>
           <img src={user} alt="user icon" className='w-full h-full p-5 text-gray-500' />
         </div>
-        <div>
-          <h3 className='text-gray-600 font-semibold'>Vortech</h3>
-          <p className='text-sm text-gray-500 '>4263410275</p>
+        <div className='flex justify-between flex-1' >
+        <div className=' flex-1 text-left'>
+
+          <h3 className='text-gray-700 font-semibold text-base md:text-xl'>Nathan Devlin</h3>
+          <p className='text-sm text-gray-500 text-left font-semibold'>4263410275</p>
 
         </div>
+        <div className='flex-1'>
+          <p className=' text-lg md:text-2xl font-semibold'>Balance </p>
+          <span className='md:text-xl text-base text-gray-600 font-semibold'>$31,182</span>
+        </div>
+
+        </div>
+      
       </div>
       <ul className='flex mt-8'>
       <li className='relative border-b py-2'><NavLink className={({isActive}) => (isActive ? activeLink : inactiveLink)} to="/dashboard/account/identity">ACCOUNT</NavLink> </li>

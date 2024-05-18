@@ -6,7 +6,12 @@
   height: 40vmin;
   pointer-events: none;
 }
-
+.bg-screen{
+  background: linear-gradient(rgba(0, 0, 0, 0.151), rgba(128, 128, 128, 0.13)), url('../public/images/towfiqu-barbhuiya-joqWSI9u_XM-unsplash.jpg');
+  /* background-size: contain; */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

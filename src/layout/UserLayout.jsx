@@ -46,7 +46,7 @@ const UserLayout = ({children}) => {
     },[])
   return (
     <div className='h-full flex flex-col bg-gray-200 overflow-y-auto'>
-        <header className='bg-white flex justify-between py-10 shadow px-2 md:px-10 items-center border-b'>
+        <header className='bg-white flex justify-between py-3 shadow px-2 md:px-10 items-center border-b'>
             <NavLink to={'/'} className={'px-2 w-52 text-3xl text-green-700 font-semibold'}>
                 <img src={logo} alt="" />
             </NavLink>

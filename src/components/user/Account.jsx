@@ -35,7 +35,7 @@ const ProfileAccount = () => {
                     Trading
                   </p>
                   <p class="text-4xl font-semibold text-gray-900">
-                    $5114.00
+                    $7364.00
                   </p>
                 </div>
               </div>

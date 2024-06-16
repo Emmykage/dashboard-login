@@ -17,7 +17,7 @@ const ProfileAccount = () => {
                     Profits
                   </p>
                   <p class="text-4xl font-semibold text-gray-900">
-                     $26,164.00
+                     $00.00
                   </p>
                 </div>
               </div>
@@ -35,7 +35,7 @@ const ProfileAccount = () => {
                     Trading
                   </p>
                   <p class="text-4xl font-semibold text-gray-900">
-                    $7364.00
+                    $67,346.00
                   </p>
                 </div>
               </div>
